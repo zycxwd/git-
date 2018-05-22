@@ -40,3 +40,10 @@ git log
 
 $ git log --pretty=oneline
 
+查看历史记录基础简单版只显示commit的ID
+
+$ git reset --hard "commit 的 ID"
+回滚到ID的版本
+
+git reflog
+会打印你的每一次记录,如果想回滚到历史版本没有了ID,可以使用这个命令
