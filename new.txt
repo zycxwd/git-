@@ -34,3 +34,9 @@ git diff
 git add  
 git commit -m "....."
 
+git log 
+
+查看历史版本记录
+
+$ git log --pretty=oneline
+
