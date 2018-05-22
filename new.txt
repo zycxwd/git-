@@ -1,5 +1,18 @@
+下载git
 
+使用git输入你的邮箱和用户名
 
+git config --global user.email "..."
+
+创建文件夹
+
+进入文件夹
+
+初始化文件夹变为git仓库
+
+git init
+
+初始化
 
 git add 
 
@@ -17,6 +30,7 @@ git diff
 
 查看修改内容
 
-如果文件修改需要重新添加
+如果文件修改了就需要重新添加使用
 git add  
 git commit -m "....."
+
