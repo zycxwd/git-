@@ -65,7 +65,7 @@ git rm 文件名
 
 
 
-远程仓库的连接
+远程仓库github的连接与托管
 
 查看主目录是否有.shh文件如果有，再看看这个目录下有没有id_rsa和id_rsa.pub这两个文件
 
@@ -74,11 +74,11 @@ ssh-keygen -t rsa -C "youremail@example.com"
 
 一路回车就好
 
-之后看到这两个就是SSH Key的秘钥对，id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥，可以放心地告诉任何人。
+之后看到这两个就是SSH Key的秘钥对，id_rsa是私钥，id_rsa.pub是公钥
 
 
-登陆GitHub，打开“Account settings”，“SSH Keys”页面
-
+登陆GitHub，打开“ settings " 找到"Account settings”，“SSH Keys”页面
+(如果已经有了就会看到"settings" "sshkeys and gpg keys")
 点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容
 
 
@@ -86,12 +86,15 @@ ssh-keygen -t rsa -C "youremail@example.com"
 远程仓库与本地仓库关联
 
 登陆GitHub，然后，在右上角找到“Create a new repo”按钮，创建一个新的仓库：
+为仓库命名,其他默认饥渴
 
 在本地git输入指令建立关联
+
 git remote add origin git@github.com:michaelliao/learngit.
 
 把本地库的所有内容推送到远程库上
 git push -u origin master
+之后会弹出输入用户名和密码,输入之后就关联并且托管到github
 
 
 
