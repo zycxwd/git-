@@ -96,7 +96,9 @@ git remote add origin git@github.com:michaelliao/learngit.
 git push -u origin master
 之后会弹出输入用户名和密码,输入之后就关联并且托管到github
 
-
+第一次需要输入-u建立关联
+之后如果将本地修改提交到github直接输入
+git push origin master
 
 
 
