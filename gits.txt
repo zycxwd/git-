@@ -81,18 +81,21 @@ ssh-keygen -t rsa -C "youremail@example.com"
 
 远程仓库与本地仓库关联
 
-登陆GitHub，然后，在右上角找到“Create a new repo”按钮，创建一个新的仓库：
-为仓库命名,其他默认饥渴
+登陆GitHub，然后，在右上角小加号或者下来小箭头位置找到“Create a new repo”按钮，创建一个新的仓库：
+为仓库命名,其他默认即可
 
 在本地git输入指令建立关联
 
-git remote add origin git@github.com:michaelliao/learngit.
+git remote add origin git@github.com:zycxwd/git-.
+zycxwd改成自己的,git是你建立的仓库名字
+
+git push -u origin master
 
 把本地库的所有内容推送到远程库上
-git push -u origin master
 之后会弹出输入用户名和密码,输入之后就关联并且托管到github
 
 第一次需要输入-u建立关联
-之后如果将本地修改提交到github直接输入
+之后如果将本地修改提交到github,commit后直接输入
 git push origin master
+
 
