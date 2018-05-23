@@ -1,0 +1,120 @@
+git的使用
+
+下载git
+
+使用git输入你的邮箱和用户名
+
+git config --global user.email "..."
+
+创建文件夹
+
+进入文件夹
+
+初始化文件夹变为git仓库
+
+git init
+
+初始化
+
+创建文件,此时的文件其实是在git的工作区,我们在这时候修改新建我们的项目
+
+git add 
+
+添加动作,把工作区的文件添加到暂存区
+
+git commit -m "说明" 
+
+托管到仓库,把暂存区提交到分支,可以一次托管多个文件
+
+git status 
+
+查看仓库当前状态
+
+git diff
+
+查看修改内容
+
+如果文件修改了就需要重新添加使用
+git add  
+git commit -m "....."
+
+git log 
+
+查看历史版本记录 穿梭前，用git log可以查看提交历史，以便确定要回退到哪个版本。
+
+git log --pretty=oneline 
+
+查看历史记录基础简单版只显示commit的ID
+
+git reset --hard "commit 的 ID"
+
+回滚到ID的版本 HEAD指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，使用命令git reset --hard commit_id。
+
+git reflog
+
+会打印你的每一次记录,如果想回滚到历史版本没有了ID,可以使用这个命令 要重返未来，用git reflog查看命令历史，以便确定要回到未来的哪个版本。
+
+git checkout -- "文件名"
+
+工作区的修改不想保留 使用这个命令丢弃修改
+工作区的修改已经提交到暂存区,那么需要先git reset HEAD <file>回到上一个版本然后git checkout -- "文件名"丢弃工作区的修改
+
+git rm 文件名
+
+删除文件
+
+
+
+远程仓库github的连接与托管
+
+查看主目录是否有.shh文件如果有，再看看这个目录下有没有id_rsa和id_rsa.pub这两个文件
+
+如果没有输入:
+ssh-keygen -t rsa -C "youremail@example.com"
+
+一路回车就好
+
+之后看到这两个就是SSH Key的秘钥对，id_rsa是私钥，id_rsa.pub是公钥
+
+
+登陆GitHub，打开“ settings " 找到"Account settings”，“SSH Keys”页面
+(如果已经有了就会看到"settings" "sshkeys and gpg keys")
+点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容
+
+
+
+远程仓库与本地仓库关联
+
+登陆GitHub，然后，在右上角找到“Create a new repo”按钮，创建一个新的仓库：
+为仓库命名,其他默认饥渴
+
+在本地git输入指令建立关联
+
+git remote add origin git@github.com:michaelliao/learngit.
+
+把本地库的所有内容推送到远程库上
+git push -u origin master
+之后会弹出输入用户名和密码,输入之后就关联并且托管到github
+
+第一次需要输入-u建立关联
+之后如果将本地修改提交到github直接输入
+git push origin master
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
