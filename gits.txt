@@ -97,5 +97,6 @@ git push -u origin master
 第一次需要输入-u建立关联
 之后如果将本地修改提交到github,commit后直接输入
 git push origin master
+根据提示输入githu用户名输入密码提交同步成功.
 
 
